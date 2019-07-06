@@ -1,7 +1,8 @@
+import java.math.BigInteger;
 import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * Created by mtumilowicz on 2018-11-25.
@@ -9,6 +10,7 @@ import static org.hamcrest.CoreMatchers.is;
 public class FactorialTest {
 
     private final Factorial factorial = new Factorial();
+    private final Factorial2 factorial2 = new Factorial2();
 
     @Test
     public void _3() {
@@ -41,7 +43,7 @@ public class FactorialTest {
     }
 
     @Test
-    public void _1_000_000() {
-//        factorial.applyAsLong(1_000_000);
+    public void _20_v2() {
+        assertThat(factorial2.apply(20), is(new BigInteger("2432902008176640000")));
     }
 }
